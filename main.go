@@ -10,6 +10,7 @@ func main()  {
 	//medium.Calculate("1 + 2 * 3")
 	//fmt.Println("abc")
 
-	fmt.Println(easy.RevverseInteger_COOLFUN(-1234567))
+	//fmt.Println(easy.RevverseInteger_COOLFUN(-1234567))
+	fmt.Println(easy.IsPalindrome(12321))
 
 }
