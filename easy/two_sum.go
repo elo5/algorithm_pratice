@@ -28,6 +28,23 @@ Constraints:
 Only one valid answer exists.
  */
 
+func TwoSum_faster(nums []int, target int) []int {
+
+	numsMap := make(map[int]int)
+	result := make([]int,0)
+
+	for i,v := range nums{
+		remainder := target - v
+		index, ok := numsMap[remainder]
+		if ok == true {
+			return append(result,i,index)
+		}else {
+			numsMap[v] = i
+		}
+	}
+	return result
+}
+
 func TwoSum(nums []int, target int) []int {
 	for i,v := range nums {
 		v1 := target - v
