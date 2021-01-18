@@ -28,14 +28,16 @@ Constraints:
 Only one valid answer exists.
  */
 
+//TwoSum_faster -- 遍历nums，假设索引为i的数字为v，target - v得到所需数字为v1，
+//若能从numsMap从取得v1在nums中对应的索引INDEX，则返回[i,index]，
+//否则将v和i存入numsMap中v为key,i为值
+//只需要遍历一次
 func TwoSum_faster(nums []int, target int) []int {
-
 	numsMap := make(map[int]int)
 	result := make([]int,0)
-
 	for i,v := range nums{
-		remainder := target - v
-		index, ok := numsMap[remainder]
+		v1 := target - v
+		index, ok := numsMap[v1]
 		if ok == true {
 			return append(result,i,index)
 		}else {
@@ -45,6 +47,9 @@ func TwoSum_faster(nums []int, target int) []int {
 	return result
 }
 
+//TwoSum -- 遍历nums，假设索引为i的数字为v，target - v得到所需数字为v1，
+//从i+1开始查找，找到值为v1的数字(假设其索引为a)则返回[i,a]
+//可能需要多次遍历
 func TwoSum(nums []int, target int) []int {
 	for i,v := range nums {
 		v1 := target - v

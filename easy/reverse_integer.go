@@ -6,7 +6,10 @@ import (
 	"strconv"
 )
 
-func RevverseInteger_COOLFUN(x int) int {
+//ReverseInteger_COOLFUN 超过范围返回0
+//若是负数，保存一个布尔变量，返回结果前作转换
+//除10取余的值*10 （表达能力有限，代码更直观）
+func ReverseInteger_COOLFUN(x int) int {
 	if math.MaxInt32 < x ||  math.MinInt32 > x{
 		return 0
 	}
@@ -35,7 +38,10 @@ func RevverseInteger_COOLFUN(x int) int {
 	return newInt
 }
 
-func RevverseInteger(x int) int {
+//ReverseInteger 超过范围返回0
+//若是负数，保存一个布尔变量，返回结果前作转换
+//将数字转为字符串后，遍历字符组成新的字符串后转为int
+func ReverseInteger(x int) int {
 
 	if math.MaxInt32 < x ||  math.MinInt32 > x{
 		return 0
