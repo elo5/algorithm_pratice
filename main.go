@@ -11,6 +11,6 @@ func main()  {
 	//fmt.Println("abc")
 
 	//fmt.Println(easy.RevverseInteger_COOLFUN(-1234567))
-	fmt.Println(easy.IsPalindrome(12321))
+	fmt.Println(easy.IsPalindrome(123321))
 
 }
