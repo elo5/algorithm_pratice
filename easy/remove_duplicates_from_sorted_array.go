@@ -1,7 +1,5 @@
 package easy
 
-import "fmt"
-
 /*
 26. Remove Duplicates from Sorted Array
 Easy
@@ -45,20 +43,35 @@ func RemoveDuplicates(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
-	res  := make(map[int]int)
-	for i,v := range nums{
-		_,ok := res[v]
-		if !ok {
-			res[v]=i
+	n := len(nums)
+	prev := 0
+	next := 1
+	for next < n {
+		if nums[prev] == nums[next] {
+			next++
+		}else {
+			prev++
+			nums[prev] = nums[next]
 		}
 	}
-
-
-	keys := []int{}
-	for k,_ := range res {
-		keys = append(keys,k)
-	}
-
-	fmt.Println(keys)
-	return len(keys)
+	return prev + 1
 }
+
+//func RemoveDuplicates(nums []int) int {
+//	if len(nums) == 0 {
+//		return 0
+//	}
+//	res := make(map[int]int)
+//	for i,v := range nums{
+//		_,ok := res[v]
+//		if !ok {
+//			res[v]=i
+//		}
+//	}
+//
+//	nums = nums[:copy(nums, nums[len(nums):])]
+//	for k,_ := range res{
+//		nums = append(nums,k)
+//	}
+//	return len(nums)
+//}
