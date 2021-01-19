@@ -21,5 +21,10 @@ func main()  {
 	//fmt.Println(easy.RemoveDuplicates([]int{0,0,1,1,1,2,2,3,3,4}))
 	//fmt.Println(easy.RemoveDuplicates([]int{1,2,2,3,4,5,5}))
 
-	fmt.Println(easy.SearchInsert( []int{2},1  ))
+	//fmt.Println(easy.SearchInsert( []int{2},1  ))
+
+	fmt.Println(easy.RunningSum([]int{1,2,3,4,5,6,7}))
+	//fmt.Println(easy.RunningSum([]int{1,1,1,1,1}))
+	//fmt.Println(easy.RunningSum([]int{3,1,2,10,1}))
+	fmt.Println(easy.RunningSum([]int{3,1,2,10,1}))
 }
