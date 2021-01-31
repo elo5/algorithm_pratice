@@ -1,7 +1,5 @@
 package easy
 
-import "fmt"
-
 /*
 53. Maximum Subarray
 Easy
@@ -37,29 +35,25 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 
 
 func MaxSubArray(nums []int) int {
-
-	//max := int(^(int(^uint(0) >> 1)))
-	//fmt.Println("   max:  " ,max)
-
 	if len(nums) == 0 {
 		return 0
 	}
 
-	sum := 0
+	sum := nums[0]
+	temp := 0
+	if nums[0] >0 {
+		temp = nums[0]
+	}
 
-	for i , v := range nums {
-		temp:= sum + v
-
-		fmt.Println(i,": ",v, "   sum:  " ,sum)
-
-		if temp >= sum {
-			sum += v
-		}else{
-			sum = 0
+	for i := 1; i< len(nums); i++{
+		temp = temp + nums[i]
+			if temp > sum {
+			sum = temp
+		}
+		if temp <0 {
+			temp = 0
 		}
 	}
-	
 
 	return sum
-
 }
