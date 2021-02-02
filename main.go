@@ -28,5 +28,8 @@ func main()  {
 	//fmt.Println(easy.RunningSum([]int{3,1,2,10,1}))
 	//fmt.Println(easy.RunningSum([]int{3,1,2,10,1}))
 
-	fmt.Println(easy.MaxSubArray([]int{-2,1,-3,4,-1,2,1,-5,4}))
+	//fmt.Println(easy.MaxSubArray([]int{-2,1,-3,4,-1,2,1,-5,4}))
+
+	//fmt.Println(easy.AddStrings("99", "99"))
+	fmt.Println(easy.AddStrings("3876620623801494171", "6529364523802684779"))
 }
