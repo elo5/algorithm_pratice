@@ -33,5 +33,9 @@ func main()  {
 	//fmt.Println(easy.AddStrings("99", "99"))
 	//fmt.Println(easy.AddStrings("3876620623801494171", "6529364523802684779"))
 
-	fmt.Println(easy.ToHex(256))
+	//fmt.Println(easy.ToHex(256))
+
+	//fmt.Println(easy.MaximumProduct([]int{-30,-1,2,10,1}))
+	fmt.Println(easy.MaximumProduct([]int{-100,-98,-1,2,3,4}))
+
 }
