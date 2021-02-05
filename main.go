@@ -36,6 +36,8 @@ func main()  {
 	//fmt.Println(easy.ToHex(256))
 
 	//fmt.Println(easy.MaximumProduct([]int{-30,-1,2,10,1}))
-	fmt.Println(easy.MaximumProduct([]int{-100,-98,-1,2,3,4}))
+	//fmt.Println(easy.MaximumProduct([]int{-100,-98,-1,2,3,4}))
+
+	fmt.Println(easy.CheckStraightLine([][]int{{1,2},{2,3},{3,4},{4,5},{5,6},{6,7}}))
 
 }
